@@ -1,4 +1,4 @@
-"""Demostración EN VIVO para la presentación, en 4 partes (una por integrante).
+"""Demostración EN VIVO para la presentación, en 4 partes.
 
 Se detiene al final de cada parte hasta que se presiona Enter, para que
 cada quien explique mientras la pantalla muestra los resultados.
@@ -34,10 +34,9 @@ PAUSAS = True
 # ---------------------------------------------------------------------------
 # Utilidades de presentación
 # ---------------------------------------------------------------------------
-def titulo(texto, quien):
+def titulo(texto):
     print("\n" + "═" * 70)
     print(f"  {texto}")
-    print(f"  Presenta: {quien}")
     print("═" * 70 + "\n")
 
 
@@ -105,10 +104,10 @@ def calentar_todo(X, y):
 
 
 # ---------------------------------------------------------------------------
-# Parte 1 — David: el problema y la red
+# Parte 1 — el problema y la red
 # ---------------------------------------------------------------------------
 def parte_1(X, y, Xp, yp):
-    titulo("PARTE 1 · El problema y la red neuronal", "David Atilano")
+    titulo("PARTE 1 · El problema y la red neuronal")
 
     print(f"MNIST: {X.shape[0]:,} imágenes de entrenamiento y {Xp.shape[0]:,} de prueba.")
     print(f"Cada imagen es un vector de {X.shape[1]} pixeles (28 × 28) con valores de 0 a 1.\n")
@@ -136,10 +135,10 @@ def parte_1(X, y, Xp, yp):
 
 
 # ---------------------------------------------------------------------------
-# Parte 2 — Ricardo: matmul en CPU y caché
+# Parte 2 — matmul en CPU y caché
 # ---------------------------------------------------------------------------
 def parte_2():
-    titulo("PARTE 2 · Matmul en CPU: ingenua vs. por bloques (1 solo hilo)", "Ricardo Ordaz")
+    titulo("PARTE 2 · Matmul en CPU: ingenua vs. por bloques (1 solo hilo)")
     n = 1024
     rng = np.random.default_rng(0)
     A = rng.standard_normal((n, n)).astype(np.float32)
@@ -174,10 +173,10 @@ def parte_2():
 
 
 # ---------------------------------------------------------------------------
-# Parte 3 — Daniela: GPU
+# Parte 3 — GPU
 # ---------------------------------------------------------------------------
 def parte_3():
-    titulo("PARTE 3 · La GPU: cómputo vs. copias", "Daniela Sánchez")
+    titulo("PARTE 3 · La GPU: cómputo vs. copias")
     if not GPU_DISPONIBLE:
         print("Este equipo no tiene GPU CUDA. Mostramos la gráfica ya medida:")
         abrir("gpu.png")
@@ -217,10 +216,10 @@ def parte_3():
 
 
 # ---------------------------------------------------------------------------
-# Parte 4 — Javier: speedup, eficiencia y Amdahl
+# Parte 4 — speedup, eficiencia y Amdahl
 # ---------------------------------------------------------------------------
 def parte_4():
-    titulo("PARTE 4 · Speedup, eficiencia y Ley de Amdahl", "Javier Narváez")
+    titulo("PARTE 4 · Speedup, eficiencia y Ley de Amdahl")
     n = 1024
     rng = np.random.default_rng(0)
     A = rng.standard_normal((n, n)).astype(np.float32)
