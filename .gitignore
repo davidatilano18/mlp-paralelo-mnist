@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+# Caché de compilación de Numba
+*.nbi
+*.nbc
+.pytest_cache/
+# Datos descargados (se regeneran con fetch_openml)
+data/
+.ipynb_checkpoints/

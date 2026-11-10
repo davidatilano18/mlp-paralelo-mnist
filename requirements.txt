@@ -1,0 +1,10 @@
+# Versiones fijas para que todos obtengan exactamente el mismo entorno (solo CPU).
+# Para la GPU instala ADEMÁS requirements-gpu.txt.
+numpy==2.4.6          # numba-cuda 0.30 aún usa np.row_stack, eliminado en NumPy 2.5
+numba==0.68.1
+llvmlite==0.50.0
+scikit-learn==1.9.1   # solo para descargar MNIST con fetch_openml
+matplotlib==3.11.2
+pandas==3.1.1         # tablas de resultados de los benchmarks
+psutil==7.2.2         # especificaciones del equipo (núcleos, RAM)
+pytest==9.2.0

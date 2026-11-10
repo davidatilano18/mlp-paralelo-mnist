@@ -1,0 +1,7 @@
+# Soporte CUDA para numba (GPU NVIDIA). Trae libNVVM y el runtime de CUDA
+# como paquetes de pip: NO hace falta instalar el CUDA Toolkit.
+#   cu13 -> controladores NVIDIA recientes (CUDA 13, p. ej. driver >= 580)
+#   cu12 -> controladores con CUDA 12 (lo que suele tener Google Colab)
+# Revisa la versión de CUDA de tu controlador con:  nvidia-smi
+-r requirements.txt
+numba-cuda[cu13]==0.30.4
