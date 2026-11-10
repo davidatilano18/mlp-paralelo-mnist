@@ -1,0 +1,40 @@
+
+Carga matmul: 1024 x 1024, float32, bloque 32
+  matmul ingenua  1 hilos     2.6492 ± 0.0271 s
+  matmul bloques  1 hilos     0.0952 ± 0.0005 s
+  matmul bloques  2 hilos     0.0493 ± 0.0003 s
+  matmul bloques  4 hilos     0.0259 ± 0.0016 s
+  matmul bloques  8 hilos     0.0319 ± 0.0012 s
+  matmul numpy    —           0.0077 ± 0.0022 s
+  matmul gpu      —           0.0055 ± 0.0007 s
+
+Carga mlp: 1 época, 60000 muestras, lote 64, bloque 32
+  mlp    ingenua  1 hilos     5.5072 ± 0.0169 s
+  mlp    bloques  1 hilos     1.8014 ± 0.0167 s
+  mlp    bloques  2 hilos     1.1842 ± 0.0035 s
+  mlp    bloques  4 hilos     1.0357 ± 0.0246 s
+  mlp    bloques  8 hilos     1.0756 ± 0.0229 s
+  mlp    numpy    —           3.1783 ± 2.2626 s
+  mlp    gpu      —           5.1906 ± 0.3808 s
+
+ carga backend  hilos  media    std  reps  speedup  eficiencia  f_puntual  speedup_vs_ingenua
+matmul bloques    1.0 0.0952 0.0005     5   1.0000      1.0000        NaN             27.8419
+matmul bloques    2.0 0.0493 0.0003     5   1.9283      0.9642     0.9628             53.6885
+matmul bloques    4.0 0.0259 0.0016     5   3.6765      0.9191     0.9707            102.3600
+matmul bloques    8.0 0.0319 0.0012     5   2.9843      0.3730     0.7599             83.0898
+matmul     gpu    NaN 0.0055 0.0007     5      NaN         NaN        NaN            482.6628
+matmul ingenua    1.0 2.6492 0.0271     5      NaN         NaN        NaN              1.0000
+matmul   numpy    NaN 0.0077 0.0022     5      NaN         NaN        NaN            343.4357
+   mlp bloques    1.0 1.8014 0.0167     5   1.0000      1.0000        NaN              3.0571
+   mlp bloques    2.0 1.1842 0.0035     5   1.5212      0.7606     0.6852              4.6504
+   mlp bloques    4.0 1.0357 0.0246     5   1.7393      0.4348     0.5667              5.3172
+   mlp bloques    8.0 1.0756 0.0229     5   1.6749      0.2094     0.4605              5.1203
+   mlp     gpu    NaN 5.1906 0.3808     5      NaN         NaN        NaN              1.0610
+   mlp ingenua    1.0 5.5072 0.0169     5      NaN         NaN        NaN              1.0000
+   mlp   numpy    NaN 3.1783 2.2626     5      NaN         NaN        NaN              1.7327
+
+ carga  f_ajuste  speedup_maximo
+matmul    0.8672          7.5288
+   mlp    0.5340          2.1458
+
+Guardado en results/hilos_crudo.csv, hilos_resumen.csv y amdahl.csv

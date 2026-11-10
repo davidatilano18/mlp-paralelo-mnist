@@ -1,0 +1,25 @@
+{
+  "fecha": "2026-11-10T14:43:43",
+  "sistema_operativo": "Windows 11 (10.0.26200)",
+  "cpu": "13th Gen Intel(R) Core(TM) i5-13420H",
+  "nucleos_fisicos": 8,
+  "nucleos_logicos": 12,
+  "frecuencia_max_mhz": 2100,
+  "ram_gb": 15.7,
+  "gpu": [
+    {
+      "nombre": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memoria": "6141 MiB",
+      "driver": "610.78",
+      "nombre_numba": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "compute_capability": "8.9",
+      "multiprocesadores": 20
+    }
+  ],
+  "gpu_usable_por_numba": true,
+  "python": "3.13.17",
+  "numpy": "2.4.6",
+  "numba": "0.68.1",
+  "numba_hilos_max": 12,
+  "numba_capa_hilos": "omp"
+}
