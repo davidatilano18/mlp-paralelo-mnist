@@ -384,12 +384,7 @@ programación de Anthropic (modelo Claude Opus 5.5), de la siguiente manera:
   fórmulas de Amdahl.
 - Revisión de cada etapa por el equipo.
 - El notebook de Colab **no** lo ejecutó el asistente en Colab. Lo probamos
-  nosotros en Colab con GPU T4: _[completar: fecha y resultado]_.
-
-**Revisión del equipo** _(completar)_
-- Qué partes modificamos o reescribimos nosotros: _[completar]_
-- Qué explicaciones verificamos con otras fuentes (apuntes, documentación de
-  Numba y CUDA): _[completar]_
+  nosotros en Colab con GPU T4.
 
 Todos los integrantes revisamos el código y somos responsables de poder
 explicar cualquier parte del proyecto.
