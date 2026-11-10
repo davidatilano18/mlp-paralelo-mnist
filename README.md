@@ -212,14 +212,20 @@ Windows. Los resultados de este README se midieron fuera de Docker.
 
 ## GPU en Google Colab
 
-1. Abre [`notebooks/mlp_gpu_colab.ipynb`](notebooks/mlp_gpu_colab.ipynb) en
-   Colab (*Archivo → Subir notebook*).
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/davidatilano18/mlp-paralelo-mnist/blob/main/notebooks/mlp_gpu_colab.ipynb)
+
+1. Abre el notebook con el botón de arriba. Abre directamente
+   [`notebooks/mlp_gpu_colab.ipynb`](notebooks/mlp_gpu_colab.ipynb) desde
+   GitHub.
 2. Activa la GPU en *Entorno de ejecución → Cambiar tipo de entorno de
    ejecución → GPU (T4)*.
-3. Obtén el código: escribe la URL del repositorio en `REPO_URL` o, si lo
-   dejas vacío, sube un `.zip` del proyecto sin la carpeta `.venv`.
-4. Ejecuta todas las celdas. El notebook instala `numba-cuda`, corre los
-   tests, mide la GPU (cómputo contra copias) y entrena el MLP.
+3. Ejecuta todas las celdas (*Entorno de ejecución → Ejecutar todas*). El
+   notebook clona este repositorio (ya viene en `REPO_URL`), instala
+   `numba-cuda`, corre los tests, mide la GPU (cómputo contra copias) y
+   entrena el MLP.
+
+Si prefieres no clonar, deja `REPO_URL` vacío y sube un `.zip` del proyecto
+sin la carpeta `.venv`.
 
 ---
 
